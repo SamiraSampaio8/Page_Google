@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*a medida do tamanho da caixa, seja medida a partir da borda*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202124;
+}
+/*body*/
+body{
+    height: 100vh; /*Ocupando 100% da altura*/
+    display: flex;
+    flex-direction: column;
+
+}
+/*header*/
+a{
+    text-decoration: none;
+      
+}
+/*transições*/
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+header{
+    display: flex;/*Os itens fica lado a lado*/
+    flex-direction: row; /*na linha*/
+    align-items: center; /*alinhado apartir do centro*/
+    justify-content: right; /*lado direito*/
+    gap: 15px; /*espaçamento entre elementos*/
+    padding: 6px 14px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    height: 100%; /*Ocupanda 100% do espaço definido*/
+
+}
+.link-header{
+    color: #000000DE;
+    font-size: 13px;
+}
+
+.logo-apps{
+    width: 24px;
+    height: 24px;
+    fill: #5f6368; /*preenchimento do SVG (fill/strong) */
+}
+
+
+#btn-head{
+    font-family: Google Sans, Roboto, Helvetica, Arial,sans-serif;
+    background-color: #1a73e8;
+    color: white;
+    font-weight: 500;
+    padding: 9px 29px;
+    border-radius: 4px;
+        
+}
+#btn-head:hover{
+    background-color: #1b66c9;
+    box-shadow: 0 1px 3px 1px rgba(66, 64, 67, 0.15); /*Sombra*/
+    text-decoration: none;
+}
+/*SVG*/
+#icon-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    
+}
+#icon-svg:hover{
+    background-color: rgb(60, 64, 67, 0.08);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+#icon-svg::after{
+    display: none;
+    content: "Google Apps";  /*contéudo*/
+    background-color: #4f5355;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 30px); /*Deslocamento de item, eixo x/y*/
+}
+#icon-svg:hover::after{
+    display: block;
+
+}
+
+/*main*/
+
+#logo_google{
+    height: 92px;
+}
+/*box-seach*/
+#box-seach{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    width: 583px;
+    gap: 13px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+
+    
+}
+#box-seach:hover,
+#box-seach:focus-within /*Deixa enfoco o elemento dentro box-seach*/
+{
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+#box-pesquisa{
+    width: 100%;
+    height: 22px;
+    outline: none;
+    border: none;  
+}
+
+
+.icone{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    
+}
+.icon-seach{
+    width: 20px;
+    min-width: 20px;/*O minino que o icone pode ter*/
+    fill: #9aa0a6;
+    cursor: pointer;
+}
+
+.icon-keyboard{
+    width: 19px;      
+}
+.box-keyboard:hover{
+    cursor: pointer;
+    position: relative;
+
+}
+.box-keyboard::after{
+    display: none;
+    content: "Ferramenta de introdução";  /*contéudo*/
+    background-color: #4f5355;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 30px); /*Deslocamento de item, eixo x/y*/
+
+}
+.box-keyboard:hover::after{
+    display: block;
+}
+
+
+
+.icon-google{
+    width: 24px;
+    display: flex;
+}
+/*box-microfone*/
+
+.box-micrfone:hover{
+    cursor: pointer;
+    position: relative;
+}
+.box-micrfone::after{
+    display: none;
+    content: "Pesquisa por voz";  /*contéudo*/
+    background-color: #4f5355;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 30px); /*Deslocamento de item, eixo x/y*/
+
+}
+.box-micrfone:hover::after{
+    display: block;
+
+}
+
+/*box-camera*/
+.box-camera:hover{
+    cursor: pointer;
+    position: relative;
+}
+.box-camera::after{
+    display: none;
+    content: "Pesquisa por imagem";  /*contéudo*/
+    background-color: #4f5355;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 30px); /*Deslocamento de item, eixo x/y*/
+
+}
+.box-camera:hover::after{
+    display: block;
+
+}
+
+/*button*/
+
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+   
+
+}
+.btn-main{
+    display: flex;
+    flex-direction: row;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    border: 1px solid transparent;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 16px;
+    border-radius: 4px;
+    cursor: pointer; /*O cursor vira uma mãozinha*/
+}
+.btn-main:hover{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dadce0;
+
+}
+#text-main{
+    display: flex;
+    color: #4d5156;
+    font-size: 13px;
+    gap: 5px;
+    margin-bottom: 10vh;  /*10% da viewport hieght*/
+}
+#link-main{
+    color: #1a0dab;
+}
+
+/*footer*/
+footer{
+    background-color: #f2f2f2;
+}
+/*rodape*/
+.rodape {
+    padding: 15px 30px;
+    display: flex;/*itens lado a lado*/
+    flex-direction: row;/*direção do item*/
+    justify-content: space-between;/*espacemento apartir da borda e do centro*/
+    color: #202124;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.rodape p{
+    font-size: 15px;
+    
+}
+.rodape-border{
+    border-bottom: 1px solid #dadce0;
+}
+.rodape-link{
+    display: flex;
+    gap: 30px;
+    padding: 0px 5px;
+    
+}
+#text-config{
+    text-decoration: none;
+      
+}
+/*transições*/
+
+#text-config:hover{
+    text-decoration: underline;
+}
